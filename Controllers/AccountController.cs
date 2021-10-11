@@ -20,7 +20,7 @@ namespace CoreApi_JWT.Controllers
 
         [HttpPost]
         [Route("login")]
-        public async Task<ActionResult<dynamic>> Authenticate([FromBody]User user)
+        public ActionResult<dynamic> Authenticate([FromBody]User user)
         {
             var userDB = UsersRepository.Get(user.Username, user.Password);
 
